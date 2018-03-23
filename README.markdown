@@ -93,3 +93,41 @@ This pairs great with [sleuth.vim](https://github.com/tpope/vim-sleuth).
 
 Copyright © Tim Pope.  Distributed under the same terms as Vim itself.
 See `:help license`.
+
+# Plugins
+
+```vim
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+
+Plug 'vim-scripts/FencView.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'btrie/gtags.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
+Plug 'majutsushi/tagbar'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'ervandew/supertab'
+
+Plug 'tpope/vim-fugitive'
+" Plug 'airblade/vim-gitgutter'
+
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
+Plug 'pangloss/vim-javascript'
+Plug 'godlygeek/tabular'
+Plug 'btrie/vim-sensible'
+
+" Initialize plugin system
+call plug#end()
+```
+
