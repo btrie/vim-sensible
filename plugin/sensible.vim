@@ -97,7 +97,12 @@ colorscheme solarized
 
 set nocompatible
 set nowrap
-set clipboard=unnamedplus  " yank to the system register (*) by default
+
+if has('unnamedplus')
+  set clipboard=unnamedplus
+else
+  set clipboard=unnamed
+endif
 
 set colorcolumn=80
 
