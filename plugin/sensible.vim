@@ -215,5 +215,7 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 au BufNewFile,BufReadPost *.html,*.js,*.css,*.json setl shiftwidth=4 expandtab softtabstop=4
 au FileType gitcommit setl shiftwidth=4 expandtab softtabstop=4
 
+set formatoptions-=t
+
 
 " vim:set ft=vim et sw=2:
