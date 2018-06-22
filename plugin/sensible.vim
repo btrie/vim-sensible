@@ -212,10 +212,33 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 " tab settings
-au BufNewFile,BufReadPost *.html,*.js,*.css,*.json setl shiftwidth=4 expandtab softtabstop=4
-au FileType gitcommit setl shiftwidth=4 expandtab softtabstop=4
+"au BufNewFile,BufReadPost *.html,*.js,*.css,*.json setl shiftwidth=4 expandtab softtabstop=4
+"au FileType gitcommit setl shiftwidth=4 expandtab softtabstop=4
 
 set formatoptions-=t
 
+set complete=.
+set wildignorecase
+set wildignore+=**/node_modules/**
+set foldmethod=indent
+set foldopen-=search
+set nofoldenable
+
+" virtual tabstops using spaces
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+" allow toggling between local and default mode
+function TabToggle()
+  if &expandtab
+    set shiftwidth=8
+    set softtabstop=0
+    set noexpandtab
+  else
+    set shiftwidth=4
+    set softtabstop=4
+    set expandtab
+  endif
+endfunction
 
 " vim:set ft=vim et sw=2:
