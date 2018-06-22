@@ -223,6 +223,7 @@ set wildignore+=**/node_modules/**
 set foldmethod=indent
 set foldopen-=search
 set nofoldenable
+set foldlevel=99
 
 " virtual tabstops using spaces
 set shiftwidth=4
