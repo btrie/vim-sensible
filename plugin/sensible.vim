@@ -178,9 +178,7 @@ let g:javascript_plugin_jsdoc = 1
 let g:Gtags_OpenQuickfixWindow = 0
 
 
-map <F2> :NERDTreeToggle<CR>
 map <F3> :GtagsCursor<CR>
-nnoremap <silent> <F7> :TagbarToggle<CR>
 map <F8> :b#<CR>
 
 
@@ -194,8 +192,6 @@ fun! FindFiles(filename)
 	call delete(error_file)
 endfun
 command! -nargs=1 Find call FindFiles(<q-args>)
-
-let g:SuperTabNoCompleteAfter = [',', '\s', ':', ';', '/', '^', "'", '"', '{', '}', '[', ']', '(', ')']
 
 
 function! s:DiffWithSaved()
@@ -217,9 +213,12 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 set formatoptions-=t
 
+" code complete
 set complete=.
 set wildignorecase
 set wildignore+=**/node_modules/**
+
+" fold
 set foldmethod=indent
 set foldopen-=search
 set nofoldenable
