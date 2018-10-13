@@ -213,6 +213,9 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 set formatoptions-=t
 
+" code format
+au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " code complete
 set complete=.
 set wildignorecase
