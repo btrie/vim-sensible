@@ -245,7 +245,8 @@ function TabToggle()
 endfunction
 
 " GUI
-set guioptions-=mT
+set guioptions-=m
+set guioptions-=T
 set guifont=SourceCode\ Pro\ 12
 
 " vim:set ft=vim et sw=2:
