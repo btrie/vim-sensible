@@ -226,6 +226,7 @@ set foldmethod=indent
 set foldopen-=search
 set nofoldenable
 set foldlevel=99
+au FileType git setlocal foldenable foldlevel=0
 
 " virtual tabstops using spaces
 set shiftwidth=4
