@@ -182,18 +182,6 @@ map <F3> :GtagsCursor<CR>
 map <F8> :b#<CR>
 
 
-" find files and populate the quickfix list
-fun! FindFiles(filename)
-	let error_file = tempname()
-	silent exe '!find . -name "'.a:filename.'" | xargs file | sed "s/:/:1:/" > '.error_file
-	set errorformat=%f:%l:%m
-	exe "cfile ". error_file
-	" copen
-	call delete(error_file)
-endfun
-command! -nargs=1 Find call FindFiles(<q-args>)
-
-
 function! s:DiffWithSaved()
 	let filetype=&ft
 	diffthis
@@ -249,5 +237,11 @@ endfunction
 set guioptions-=m
 set guioptions-=T
 set guifont=SourceCode\ Pro\ 12
+
+" Syntax highlight
+augroup vimrc
+    autocmd!
+    autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+augroup END
 
 " vim:set ft=vim et sw=2:
