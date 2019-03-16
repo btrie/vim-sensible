@@ -219,16 +219,19 @@ au FileType git setlocal foldenable foldlevel=0
 " virtual tabstops using spaces
 set shiftwidth=4
 set softtabstop=4
+set tabstop=4
 set expandtab
 " allow toggling between local and default mode
 function TabToggle()
   if &expandtab
     set shiftwidth=8
     set softtabstop=0
+    set tabstop=8
     set noexpandtab
   else
     set shiftwidth=4
     set softtabstop=4
+    set tabstop=4
     set expandtab
   endif
 endfunction
