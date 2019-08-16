@@ -248,4 +248,12 @@ augroup vimrc
     autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
 augroup END
 
+" Backup file
+set nobackup
+set nowb
+set noswapfile
+
+" Diff
+set diffopt+=vertical
+
 " vim:set ft=vim et sw=2:
