@@ -243,10 +243,10 @@ set guioptions-=T
 set guifont=SourceCode\ Pro\ 12
 
 " Syntax highlight
-augroup vimrc
-    autocmd!
-    autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
-augroup END
+" augroup vimrc
+"     autocmd!
+"     autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+" augroup END
 
 " Backup file
 set nobackup
