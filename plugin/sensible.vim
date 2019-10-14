@@ -235,7 +235,7 @@ function TabToggle()
     set expandtab
   endif
 endfunction
-set cinoptions+=:0  " switch indention
+" set cinoptions+=:0  " switch indention
 
 " GUI
 set guioptions-=m
