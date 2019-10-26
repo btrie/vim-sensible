@@ -254,6 +254,6 @@ set nowb
 set noswapfile
 
 " Diff
-set diffopt+=vertical
+" set diffopt+=vertical
 
 " vim:set ft=vim et sw=2:
