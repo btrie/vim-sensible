@@ -192,8 +192,8 @@ endfunction
 com! DiffSaved call s:DiffWithSaved()
 
 " Show trailing whitepace and spaces before a tab:
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$\| \+\ze\t/
+" highlight ExtraWhitespace ctermbg=red guibg=red
+" match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 " tab settings
 "au BufNewFile,BufReadPost *.html,*.js,*.css,*.json setl shiftwidth=4 expandtab softtabstop=4
